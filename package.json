@@ -1,0 +1,20 @@
+{
+  "name": "devlink",
+  "version": "1.0.0",
+  "description": "platform for devs",
+  "keywords": [
+    "nodejs",
+    "javscript"
+  ],
+  "license": "ISC",
+  "author": "Mithlesh Shah",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
