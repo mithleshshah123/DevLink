@@ -12,4 +12,5 @@
 - JS object vs JSON (difference)
 - Add the express json middleware tp your app
 - Make your signup API dynamic to receive data from the end user
+- Never Trust req.body
 -
