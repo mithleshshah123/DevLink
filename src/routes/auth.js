@@ -14,7 +14,6 @@ authRouter.post("/signup", async (req, res) => {
     //ecncrpt the password
     const { firstName, lastName, emailId, password } = req.body;
     const passwordHash = await bcrypt.hash(password, 10);
-    console.log(passwordHash);
     //Creating a new instance of the user model
     const user = new User({
       firstName,
@@ -43,10 +42,9 @@ authRouter.post("/login", async (req, res) => {
     if (isPasswordValid) {
       //create a jwt token
       const token = await user.getJWT();
-      console.log(token);
 
       res.cookie("token", token, { expires: new Date(Date.now() + 7 * 36000) });
-      res.send("Login successful");
+      res.send(user);
     } else {
       throw new Error("Invalid Credentials!");
     }
