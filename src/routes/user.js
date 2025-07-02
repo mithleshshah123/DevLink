@@ -3,7 +3,6 @@ const userRouter = express.Router();
 
 const { userAuth } = require("../middlewares/auth");
 const ConnectionRequest = require("../models/connectionRequest");
-const { set } = require("mongoose");
 const User = require("../models/user");
 
 const USER_SAFE_DATA = [
@@ -13,6 +12,7 @@ const USER_SAFE_DATA = [
   "gender",
   "about",
   "skills",
+  "photoUrl",
 ];
 //Get all the pending Connection request for the loggedin user
 userRouter.get("/user/requests/received", userAuth, async (req, res) => {
