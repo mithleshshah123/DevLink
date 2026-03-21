@@ -53,7 +53,7 @@ requestRouter.post(
 
       try {
         const emailRes = await sendEmail.run("A new friend request from " + req.user.firstName,
-          req.user.firstName + " is " + status + " in " + toUser.firstName
+          req.user.firstName + " wants to connect with( " + status + ") " + toUser.firstName
         );
         console.log("Email sent:", emailRes);
       } catch (emailErr) {

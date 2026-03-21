@@ -33,7 +33,7 @@ const createSendEmailCommand = (toAddress, fromAddress,subject,body) => {
 const run = async (subject,body) => {
   const sendEmailCommand = createSendEmailCommand(
     "mithleshshah243@gmail.com",
-    "mithlesh@devlink.world",
+    "support@devlink.world",
     subject,
     body
   );
